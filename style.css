@@ -63,3 +63,16 @@ body {
   width: 50%;
   /* text-shadow: 0 0 1px black; */
 }
+
+/* POWERSTATS */
+.power-stats {
+  font-size: larger;
+  font-weight: bold;
+
+}
+
+/* Image  */
+.hero-img {
+  height: 30%;
+  width: 30%;
+}
