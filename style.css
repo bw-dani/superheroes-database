@@ -64,15 +64,61 @@ body {
   /* text-shadow: 0 0 1px black; */
 }
 
-/* POWERSTATS */
+.hero-container {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  display: inline-flex;
+  width: 300px;
+  height: 350px;
+  justify-content: center;
+}
+
 .power-stats {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  font-size: 2rem;
+  font-weight: bolder;
+  white-space: pre-line;
+  text-align: justify;
+  margin: 20px;
+}
+
+.powerstats-values {
+  padding: 0 10px;
+}
+
+
+/* POWERSTATS */
+/* .power-stats {
+  display: inline-flex;
+  flex-wrap: nowrap;
+
   font-size: larger;
   font-weight: bold;
+  white-space: pre-line;
+  text-align: justify;
 
 }
+
+.powerstats-keys {
+  display: inline-block;
+} */
+
+
 
 /* Image  */
-.hero-img {
+/* .hero-img {
+  display: inline-block;
+  flex-wrap: nowrap;
+  flex-direction: row;
   height: 30%;
   width: 30%;
-}
+} */

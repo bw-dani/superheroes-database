@@ -10,32 +10,50 @@ const button = document.querySelector('.submit-button')
 button.addEventListener('click', async () => {
   let userInput = input.value;
   const response = await axios.get(`${BASE_URL}/search/${userInput}`); //endpoint able to search character by name
-  // console.log(response.data.results[0]);
-  renderList(response.data.results[0]) // result wanted to get information of the first in the list
+  console.log(response.data.results[0]);
+  statsList(response.data.results[0]) // result wanted to get information of the first in the list
 
 });
 
 
 const heroDisplay = document.querySelector('.show-hero')
 
-let renderList = hero => {
+let statsList = hero => {
   let heroContainer = document.createElement('div')
   heroContainer.className = "hero-container";
 
-  let heroName = document.createElement('h3')
+  const section = document.querySelector('section')
+  let heroName = document.createElement('h2');
   heroName.innerHTML = `${hero.name}`;
-  heroContainer.appendChild(heroName);
-
-  const powerStats = document.createElement('p');
-  powerStats.className = "power-stats"
-  powerStats.innerHTML = Object.entries(hero.powerstats)
-  heroContainer.appendChild(powerStats)
-  // console.log(powerStats);
+  section.append(heroName);
 
   const heroImg = document.createElement('img')
   heroImg.className = "hero-img"
   heroImg.setAttribute('src', hero.image.url)
+
   heroContainer.appendChild(heroImg)
+
+  const powerStats = document.createElement('div')
+  powerStats.className = "power-stats"
+
+  heroContainer.appendChild(powerStats)
+
+  const powerStatsKeys = document.createElement('p');
+  powerStatsKeys.className = "powerstats-keys"
+  powerStatsKeys.innerHTML = `${Object.keys(hero.powerstats)}`.split(`,`).join(': \n ')
+  // powerStats.innerHTML = `${Object.keys(hero.powerstats)} ${Object.values(hero.powerstats)}`.split(`,`).join('\n')
+  // let array = powerStats.innerHTML.split(',').join('\n')
+  // let powerStats = array
+  // powerStats.append(array)
+  powerStats.appendChild(powerStatsKeys)
+  console.log(powerStatsKeys);
+
+  const powerStatsValues = document.createElement('p')
+  powerStatsValues.className = "powerstats-values"
+  powerStatsValues.innerHTML = `${Object.values(hero.powerstats)}`.split(`,`).join('\n ')
+  powerStats.appendChild(powerStatsValues)
+  console.log(powerStatsValues);
+
 
   heroDisplay.appendChild(heroContainer)
 
