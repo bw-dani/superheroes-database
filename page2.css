@@ -1,0 +1,168 @@
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/waldemar-brandt-eIOPDU3Fkwk-unsplash.jpg");
+  background-size: 100% 100%;
+  background-repeat: unset;
+  background-position: cover;
+}
+
+
+/* Navigation Bar */
+
+.nav-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(172, 57, 28, 0.596);
+  text-align: center;
+}
+
+.nav-bar li {
+  /* font-family: ; */
+  font-size: 1em;
+  line-height: 40px;
+  height: 40px;
+  display: inline-block;
+  margin: 10px;
+  padding-right: 30px;
+}
+
+.nav-bar a {
+  display: block;
+  color: black;
+  background-color: rgba(172, 57, 28, 0.431);
+  border-radius: 30%;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  color: yellow;
+  font-size: 1.3rem;
+}
+
+.img-nav {
+  float: left;
+}
+
+
+
+/* Header */
+
+.header-h1 {
+  font-family: 'Faster One', cursive;
+  font-size: 1rem;
+  text-align: center;
+  /* border: solid 1px black; */
+  margin: 30px 100px 30px;
+  /* background-color: rgba(0, 0, 0, 0.81); */
+  overflow: hidden;
+  color: black;
+  background-image: url(Images/IMG_0032.PNG);
+  background-size: 100% 100%;
+  padding-top: 50px;
+  /* margin-top: 30px; */
+  /* margin-bottom: 30px; */
+  padding-bottom: 50px;
+}
+
+
+
+
+/* SEARCH FORM */
+#search-form {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.search-crt1,
+.search-crt2 {
+  font-size: larger;
+  border: 3px solid black;
+  width: 100%;
+}
+
+#search-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+#search1 {
+  display: inline-flex;
+}
+
+#search2 {
+  display: inline-flex;
+
+}
+
+/* HERO INFORMATION */
+.hero-info {
+  display: inline-flex;
+  flex-flow: row;
+}
+
+.hero-div {
+  display: inline-flex;
+  justify-content: space-evenly;
+
+}
+
+.hero-container1,
+.hero-container2 {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px;
+  padding-right: 0px;
+  padding-left: 10px;
+}
+
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img1,
+.hero-img2 {
+  display: inline-flex;
+  width: 250px;
+  height: 300px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.power-stats1,
+.power-stats2 {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  font-size: 1.5rem;
+  /* font-weight: bolder; */
+  white-space: pre-line;
+  text-align: justify;
+  margin: 20px;
+  padding: 0 30px;
+  margin-right: 0px;
+  padding-right: 5px;
+  padding-left: 20px;
+  margin-left: 10px;
+
+
+}
+
+.powerstats-values1,
+.powerstats-values2 {
+  padding: 0 10px;
+}
+
+.show-hero1,
+.show-hero2 {
+  background-color: rgba(223, 221, 221, 0.81);
+  margin: 20px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+
+}

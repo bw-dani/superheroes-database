@@ -19,6 +19,7 @@ button.addEventListener('click', async () => {
 const heroDisplay = document.querySelector('.show-hero')
 
 let statsList = hero => {
+  removeHero()
   let heroContainer = document.createElement('div')
   heroContainer.className = "hero-container";
 
@@ -88,4 +89,11 @@ let statsList = hero => {
   powerStats.appendChild(powerStatsKeys)
   heroDisplay.appendChild(heroContainer)
 
+}
+
+function removeHero() {
+  const oldHero = document.querySelector('.show-hero')
+  while (oldHero.lastChild) {
+    oldHero.removeChild(oldHero.lastChild)
+  }
 }
