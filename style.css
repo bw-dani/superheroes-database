@@ -3,7 +3,8 @@ html {
   height: 100%;
   background-image: url("Images/waldemar-brandt-eIOPDU3Fkwk-unsplash.jpg");
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: unset;
+  background-position: cover;
 }
 
 
@@ -14,7 +15,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(255, 198, 41, 0.71);
+  background-color: rgba(172, 57, 28, 0.596);
   text-align: center;
 }
 
@@ -31,14 +32,14 @@ html {
 .nav-bar a {
   display: block;
   color: black;
-  background-color: rgba(255, 198, 41, 0.41);
+  background-color: rgba(172, 57, 28, 0.431);
   border-radius: 30%;
   font-weight: bolder;
   text-decoration: none;
 }
 
 .nav-bar a:hover {
-  color: red;
+  color: yellow;
   font-size: 1.3rem;
 }
 
@@ -52,13 +53,19 @@ html {
 
 .header-h1 {
   font-family: 'Faster One', cursive;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
-  border: solid 1px black;
-  margin: 30px 100px;
-  background-color: rgba(0, 0, 0, 0.81);
+  /* border: solid 1px black; */
+  margin: 30px 100px 30px;
+  /* background-color: rgba(0, 0, 0, 0.81); */
   overflow: hidden;
-  color: white;
+  color: black;
+  background-image: url(Images/IMG_0032.PNG);
+  background-size: 100% 100%;
+  padding-top: 50px;
+  /* margin-top: 30px; */
+  /* margin-bottom: 30px; */
+  padding-bottom: 50px;
 }
 
 
@@ -66,7 +73,8 @@ html {
 
 /* SEARCH FORM */
 #search-form {
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .search-crt {
@@ -83,6 +91,7 @@ html {
 .hero-container {
   display: flex;
   justify-content: space-evenly;
+  padding: 30px;
 }
 
 h2 {
@@ -102,7 +111,7 @@ h2 {
   display: inline-flex;
   flex-wrap: nowrap;
   font-size: 1.5rem;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   white-space: pre-line;
   text-align: justify;
   margin: 20px;
@@ -117,4 +126,17 @@ h2 {
   background-color: rgba(223, 221, 221, 0.81);
   margin: 20px;
   margin-bottom: 0;
+}
+
+
+.sh-biography {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  font-size: 1.5rem;
+  /* font-weight: bolder; */
+  white-space: pre-line;
+  text-align: justify;
+  margin: 20px;
+  padding: 0 30px;
+
 }
