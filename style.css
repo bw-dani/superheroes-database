@@ -1,5 +1,9 @@
-body {
-  background-color: chocolate;
+html {
+  width: 100%;
+  height: 100%;
+  background-image: url("Images/waldemar-brandt-eIOPDU3Fkwk-unsplash.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 
@@ -10,13 +14,13 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: grey;
+  background-color: rgba(255, 198, 41, 0.71);
   text-align: center;
 }
 
 .nav-bar li {
   /* font-family: ; */
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 40px;
   height: 40px;
   display: inline-block;
@@ -26,30 +30,39 @@ body {
 
 .nav-bar a {
   display: block;
-  color: white;
-  /* text-align: center; */
-  /* padding: 14px 16px; */
+  color: black;
+  background-color: rgba(255, 198, 41, 0.41);
+  border-radius: 30%;
+  font-weight: bolder;
   text-decoration: none;
 }
 
 .nav-bar a:hover {
-  background-color: pink;
+  color: red;
+  font-size: 1.3rem;
 }
 
 .img-nav {
   float: left;
 }
 
+
+
 /* Header */
 
 .header-h1 {
-  font-size: 1.5rem;
+  font-family: 'Faster One', cursive;
+  font-size: 1.2rem;
   text-align: center;
   border: solid 1px black;
-  margin: 30px;
-  background-color: cornflowerblue;
+  margin: 30px 100px;
+  background-color: rgba(0, 0, 0, 0.81);
   overflow: hidden;
+  color: white;
 }
+
+
+
 
 /* SEARCH FORM */
 #search-form {
@@ -58,15 +71,18 @@ body {
 
 .search-crt {
   font-size: larger;
-  /* padding: 5px 50px; */
   border: 3px solid black;
   width: 50%;
-  /* text-shadow: 0 0 1px black; */
 }
 
+
+
+
+
+/* HERO INFORMATION */
 .hero-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 h2 {
@@ -79,46 +95,26 @@ h2 {
   width: 300px;
   height: 350px;
   justify-content: center;
+  padding-bottom: 30px;
 }
 
 .power-stats {
   display: inline-flex;
   flex-wrap: nowrap;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bolder;
   white-space: pre-line;
   text-align: justify;
   margin: 20px;
+  padding: 0 30px;
 }
 
 .powerstats-values {
   padding: 0 10px;
 }
 
-
-/* POWERSTATS */
-/* .power-stats {
-  display: inline-flex;
-  flex-wrap: nowrap;
-
-  font-size: larger;
-  font-weight: bold;
-  white-space: pre-line;
-  text-align: justify;
-
+.show-hero {
+  background-color: rgba(223, 221, 221, 0.81);
+  margin: 20px;
+  margin-bottom: 0;
 }
-
-.powerstats-keys {
-  display: inline-block;
-} */
-
-
-
-/* Image  */
-/* .hero-img {
-  display: inline-block;
-  flex-wrap: nowrap;
-  flex-direction: row;
-  height: 30%;
-  width: 30%;
-} */
