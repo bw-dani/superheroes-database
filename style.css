@@ -15,7 +15,7 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(172, 57, 28, 0.596);
+  background-color: rgba(118, 40, 21, 0.913);
   text-align: center;
 }
 
@@ -30,16 +30,19 @@ html {
 }
 
 .nav-bar a {
+  font-size: 1.3rem;
   display: block;
-  color: black;
-  background-color: rgba(172, 57, 28, 0.431);
+  color: yellow;
+  background-color: rgba(118, 40, 21, 0.762);
   border-radius: 30%;
   font-weight: bolder;
   text-decoration: none;
+  font-family: 'Alegreya Sans SC', sans-serif;
+
 }
 
 .nav-bar a:hover {
-  color: yellow;
+  color: white;
   font-size: 1.3rem;
 }
 
@@ -57,15 +60,12 @@ html {
   text-align: center;
   /* border: solid 1px black; */
   margin: 30px 100px 30px;
-  /* background-color: rgba(0, 0, 0, 0.81); */
   overflow: hidden;
   color: black;
   background-image: url(Images/IMG_0032.PNG);
   background-size: 100% 100%;
-  padding-top: 50px;
-  /* margin-top: 30px; */
-  /* margin-bottom: 30px; */
-  padding-bottom: 50px;
+  padding: 50px 0;
+  margin: 50px 120px;
 }
 
 
@@ -81,6 +81,16 @@ html {
   font-size: larger;
   border: 3px solid black;
   width: 50%;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  height: 30px;
+}
+
+.submit-button {
+  background-color: black;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
+  size: large;
+  font-size: 20px;
 }
 
 
@@ -97,6 +107,10 @@ html {
 h2 {
   display: flex;
   justify-content: center;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+
 }
 
 .hero-img {
@@ -104,7 +118,8 @@ h2 {
   width: 300px;
   height: 350px;
   justify-content: center;
-  padding-bottom: 30px;
+  border: 2px solid black;
+  margin-bottom: 20px;
 }
 
 .power-stats {
@@ -116,6 +131,8 @@ h2 {
   text-align: justify;
   margin: 20px;
   padding: 0 30px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+
 }
 
 .powerstats-values {
@@ -123,9 +140,19 @@ h2 {
 }
 
 .show-hero {
-  background-color: rgba(223, 221, 221, 0.81);
+  background-image: url(Images/1.jpg);
+
+  /* background-color: rgba(223, 221, 221, 0.81); */
   margin: 20px;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: 3px solid black;
+
 }
 
 
@@ -138,5 +165,6 @@ h2 {
   text-align: justify;
   margin: 20px;
   padding: 0 30px;
+  font-family: 'Alegreya Sans SC', sans-serif;
 
 }

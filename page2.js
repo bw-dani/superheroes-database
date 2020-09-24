@@ -3,7 +3,12 @@ const ACCESS_TOKEN = '10214601250059755'
 const BASE_URL = `${DOMAIN}/${ACCESS_TOKEN}`
 
 
+
+
+
 // **** SEARCH BUTTON 1 ****
+
+
 const input1 = document.querySelector('.search-crt1')
 const button1 = document.querySelector('.submit-button1')
 
@@ -59,7 +64,16 @@ function removeHero1() {
   }
 }
 
+
+
+
+
+
+
+
 //    ***** SEARCH BUTTON 2 *****
+
+
 
 const input2 = document.querySelector('.search-crt2')
 const button2 = document.querySelector('.submit-button2')
