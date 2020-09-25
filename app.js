@@ -1,62 +1,60 @@
-const DOMAIN = 'https://superheroapi.com/api'
+const DOMAIN = 'https://cors-anywhere.herokuapp.com/superheroapi.com/api'
 const ACCESS_TOKEN = '10214601250059755'
 const BASE_URL = `${DOMAIN}/${ACCESS_TOKEN}`
 
-//Add event listener to the button to search user input
+
+//        Select the search form
 const input = document.querySelector('.search-crt')
 const button = document.querySelector('.submit-button')
 
 
+//        Add event listener to the button to search user input
 button.addEventListener('click', async () => {
   let userInput = input.value;
   const response = await axios.get(`${BASE_URL}/search/${userInput}`); //endpoint able to search character by name
-  console.log(response.data.results[0]);
   statsList(response.data.results[0]) // result wanted to get information of the first in the list
-
 });
 
 
+
+//        Select the section where the info will be appended to and setting to the variable heroDisplay!
 const heroDisplay = document.querySelector('.show-hero')
 
+
+
 let statsList = hero => {
+  removeHero() // calling the function to remove last search
+
   let heroContainer = document.createElement('div')
   heroContainer.className = "hero-container";
 
   const section = document.querySelector('section')
   let heroName = document.createElement('h2');
   heroName.innerHTML = `${hero.name}`;
-  section.append(heroName);
+  section.append(heroName); // append the name to the section element
 
 
   //    **** IMAGE ****
   const heroImg = document.createElement('img')
   heroImg.className = "hero-img"
   heroImg.setAttribute('src', hero.image.url)
-
-  heroContainer.appendChild(heroImg)
-
+  heroContainer.appendChild(heroImg) // append the image to the main div
 
 
   //     ****  BIOGRAPHY  ****
   const biography = document.createElement('div')
   biography.className = "sh-biography"
-  heroContainer.appendChild(biography)
+  heroContainer.appendChild(biography) // append the biography to the main div
 
   const biographyKeys = document.createElement('p')
   biographyKeys.className = "biography-entries"
-  // const bioKeys = `${Object.keys(hero.biography)}`.split(',').join('\n')
-  // console.log(bioKeys);
-  // const bioValues = `${Object.values(hero.biography)}`.split(',').join('\n')
-  // console.log(bioValues);
-  // biographyKeys.innerText = (`${bioKeys}` + `:${bioValues}`)
 
   Object.entries(hero.biography).forEach((key, value) => {
-    // console.log(key, value);
-    biographyKeys.innerText += JSON.stringify((`${key}`).split(',').join(': ')).split('"').join('\r\n')
-  })
+    biographyKeys.innerText += (`${key[0]}: ${key[1]}
+    `).split(',').join('\r\n  \r\n')
+  }) //loop through each entrie, the api returned a JSON array of objects
 
-  console.log(biographyKeys);
-  biography.appendChild(biographyKeys)
+  biography.appendChild(biographyKeys) // append the paragraph to the biography div
 
 
   //  **** POWERSTATS ****
@@ -67,25 +65,20 @@ let statsList = hero => {
 
   const powerStatsKeys = document.createElement('p');
   powerStatsKeys.className = "powerstats-keys"
-  // powerStatsKeys.innerHTML = `${Object.keys(hero.powerstats)}`.split(`,`).join(': \n ')
-  // powerStats.innerHTML = `${Object.keys(hero.powerstats)} ${Object.values(hero.powerstats)}`.split(`,`).join('\n')
-  // let array = powerStats.innerHTML.split(',').join('\n')
-  // let powerStats = array
-  // powerStats.append(array)
-
-  // console.log(powerStatsKeys);
-
-  // const powerStatsValues = document.createElement('p')
-  // powerStatsValues.className = "powerstats-values"
-  // powerStatsValues.innerHTML = `${Object.values(hero.powerstats)}`.split(`,`).join('\n ')
-
-  // console.log(powerStatsValues);
 
   Object.entries(hero.powerstats).forEach((key, value) => {
-    powerStatsKeys.innerText += (`${key} \n`).split(',').join(':')
+    powerStatsKeys.innerText += (`${key} \n \n`).split(',').join(':')
   })
-  // powerStats.appendChild(powerStatsValues)
   powerStats.appendChild(powerStatsKeys)
-  heroDisplay.appendChild(heroContainer)
 
+
+  heroDisplay.appendChild(heroContainer) //append the entire heroContainer function to the heroDisplay(main div)
+
+}
+
+function removeHero() { //remove last searched character
+  const oldHero = document.querySelector('.show-hero')
+  while (oldHero.lastChild) {
+    oldHero.removeChild(oldHero.lastChild)
+  }
 }
