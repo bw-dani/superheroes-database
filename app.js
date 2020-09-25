@@ -53,8 +53,16 @@ let statsList = hero => {
 
   Object.entries(hero.biography).forEach((key, value) => {
     // console.log(key, value);
-    biographyKeys.innerText += JSON.stringify((`${key}`).split(',').join(': ')).split('"').join('\r\n')
+    biographyKeys.innerText += (`${key} `).split(',').join(': ')
+    console.log(biographyKeys);
+
   })
+
+
+
+  // biographyKeys.forEach(element => {
+
+  // });
 
   console.log(biographyKeys);
   biography.appendChild(biographyKeys)
@@ -68,24 +76,10 @@ let statsList = hero => {
 
   const powerStatsKeys = document.createElement('p');
   powerStatsKeys.className = "powerstats-keys"
-  // powerStatsKeys.innerHTML = `${Object.keys(hero.powerstats)}`.split(`,`).join(': \n ')
-  // powerStats.innerHTML = `${Object.keys(hero.powerstats)} ${Object.values(hero.powerstats)}`.split(`,`).join('\n')
-  // let array = powerStats.innerHTML.split(',').join('\n')
-  // let powerStats = array
-  // powerStats.append(array)
-
-  // console.log(powerStatsKeys);
-
-  // const powerStatsValues = document.createElement('p')
-  // powerStatsValues.className = "powerstats-values"
-  // powerStatsValues.innerHTML = `${Object.values(hero.powerstats)}`.split(`,`).join('\n ')
-
-  // console.log(powerStatsValues);
 
   Object.entries(hero.powerstats).forEach((key, value) => {
-    powerStatsKeys.innerText += (`${key} \n`).split(',').join(':')
+    powerStatsKeys.innerText += (`${key} \n \n`).split(',').join(':  ')
   })
-  // powerStats.appendChild(powerStatsValues)
   powerStats.appendChild(powerStatsKeys)
   heroDisplay.appendChild(heroContainer)
 

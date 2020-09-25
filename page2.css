@@ -15,9 +15,9 @@ html {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: rgba(118, 40, 21, 0.913);
+  background-color: rgba(193, 26, 43, 0.746);
   text-align: center;
-
+  border: 4px solid black;
 }
 
 .nav-bar li {
@@ -34,7 +34,8 @@ html {
   font-size: 1.3rem;
   display: block;
   color: yellow;
-  background-color: rgba(118, 40, 21, 0.762);
+  background-color: rgba(193, 26, 43, 0.623);
+
   border-radius: 30%;
   font-weight: bolder;
   text-decoration: none;
@@ -56,15 +57,24 @@ html {
 
 .header-h1 {
   font-family: 'Faster One', cursive;
-  font-size: 1rem;
+  font-size: 2rem;
   text-align: center;
   margin: 30px 100px 30px;
   overflow: hidden;
-  color: black;
-  background-image: url(Images/IMG_0032.PNG);
-  background-size: 100% 100%;
-  padding: 50px 0;
+  color: white;
+  /* background-image: url(Images/IMG_0032.PNG); */
+  /* background-size: 100% 100%; */
+  /* padding: 50px 0; */
   margin: 50px 120px;
+  text-shadow: 5px 5px 0px #eb452b,
+    10px 10px 0px #efa032,
+    15px 15px 0px #46b59b,
+    20px 20px 0px #017e7f,
+    25px 25px 0px #052939,
+    30px 30px 0px #c11a2b,
+    35px 35px 0px #c11a2b,
+    40px 40px 0px #c11a2b,
+    45px 45px 0px #c11a2b;
 }
 
 
@@ -185,4 +195,98 @@ h2 {
   background-size: cover;
   background-position: center;
   border: 9px solid black;
+}
+
+@media all and (max-width: 900px) {
+
+  html {
+    background-size: contain;
+    width: auto;
+
+  }
+
+  body {
+    width: 100%;
+    margin: 0;
+  }
+
+  .nav-bar ul {
+    display: flex;
+    justify-content: center;
+    width: 100%
+  }
+
+  .nav-bar li {
+    padding-right: 10px
+  }
+
+
+  .nav-bar a {
+    font-size: 2.5vh;
+  }
+
+  .header-h1 {
+    font-size: 2vh;
+    margin: 1vh 0;
+  }
+
+  .search-div {
+    justify-content: center;
+  }
+
+  .search-crt1,
+  .search-crt2 {
+    font-size: medium;
+    margin-top: 1vh
+  }
+
+  .submit-button1,
+  .submit-button2 {
+    font-size: large;
+    height: max-content;
+    margin-top: 1.5vh
+  }
+
+  .hero-div {
+    flex-direction: column;
+  }
+
+  .show-hero1,
+  .show-hero2 {
+    flex-direction: column;
+    width: 100%;
+    margin: 1vh;
+
+
+  }
+
+  h2 {
+    margin: 1vh;
+  }
+
+  .hero-container1,
+  .hero-container2 {
+    flex-direction: column;
+    align-items: center;
+
+
+  }
+
+  .hero-img1,
+  .hero-img2 {
+    margin: 0;
+    padding: 0;
+
+  }
+
+  .sh-biography {
+    text-align: center;
+    white-space: break-spaces;
+  }
+
+  .power-stats1,
+  .power-stats2 {
+    text-align: center
+  }
+
 }
