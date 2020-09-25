@@ -1,5 +1,3 @@
-
-
 # Project Overview
 
 ## Superheroes Database
@@ -9,8 +7,10 @@
 This website allows you to see your favorite superheroes details such as status,biography,appearance,etc. And the best of it all is compare their power stats.
 
 ## API and Data Sample
-API used is from Superhero 
+
+API used is from Superhero
 https://superheroapi.com/index.html
+
 ```{
     "response": "success",
     "results-for": "batman",
@@ -70,18 +70,19 @@ https://superheroapi.com/index.html
 ```
 
 ## Wireframes
+
 https://wireframe.cc/xGxlO7
 
 ### MVP/PostMVP
 
-#### MVP 
+#### MVP
 
 - Apply API
 - Apply select feature
 - Allow user to search by name
 - return the data image and status
 
-#### PostMVP  
+#### PostMVP
 
 - Add second page for character comparison
 - link to the first page
@@ -89,36 +90,40 @@ https://wireframe.cc/xGxlO7
 
 ## Project Schedule
 
-
-|  Day | Deliverable | Status
-|---|---| ---|
-|Sept 18-21| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|Sept 21| Project Approval | Incomplete
-|Sept 22| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|Sept 23| MVP | Incomplete
-|Sept 24| Post MVP/Styling | Incomplete
-|Sept 25| Presentations | Incomplete
+| Day        | Deliverable                                        | Status     |
+| ---------- | -------------------------------------------------- | ---------- |
+| Sept 18-21 | Prompt / Wireframes / Priority Matrix / Timeframes | Complete   |
+| Sept 21    | Project Approval                                   | Complete   |
+| Sept 22    | Core Application Structure (HTML, CSS, etc.)       | Complete   |
+| Sept 23    | MVP                                                | Complete   |
+| Sept 24    | Post MVP/Styling                                   | Complete   |
+| Sept 25    | Presentations                                      | Incomplete |
 
 ## Priority Matrix
+
 https://imgur.com/P3VFVCJ
 
 ## Timeframes
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
-| HTML | H | 1hr| --?-- | --?-- |
-| Working with API | H | 3hrs| --?-- | --?-- |
-| DOM,Functions, Event listeners | H | 6hrs| --?-- | --?-- |
-| CSS | H | 3hrs| --?-- | --?-- |
-| Debugging | H | 4hrs| --?-- | --?-- |
-| Adding second page | M | 3hrs| --?-- | --?-- |
-| Working with API for second page | M | 4hrs| --?-- | --?-- |
-| Linking pages| M | 3hrs| --?-- | --?-- |
-| Adding CSS styles | M | 3hrs| --?-- | --?-- |
-| Total | H | 30hrs| --?-- | --?-- |
+| Component                        | Priority | Estimated Time | Time Invested | Actual Time |
+| -------------------------------- | :------: | :------------: | :-----------: | :---------: |
+| HTML                             |    H     |      1hr       |    1:30hr     |   1:30hr    |
+| Working with API                 |    H     |      3hrs      |     4hrs      |    4hrs     |
+| DOM,Functions, Event listeners   |    H     |      6hrs      |     6hrs      |    6hrs     |
+| CSS                              |    H     |      3hrs      |    4:30hrs    |   4:30hrs   |
+| Debugging                        |    H     |      4hrs      |     5hrs      |    5hrs     |
+| Adding second page               |    M     |      3hrs      |    30mins     |   30mins    |
+| Working with API for second page |    M     |      4hrs      |      1hr      |     1hr     |
+| Linking pages                    |    M     |      3hrs      |    30mins     |   30mins    |
+| Adding Media Query               |    M     |      3hrs      |     2hrs      |    2hrs     |
+| Total                            |    H     |     30hrs      |     25hrs     |    25hrs    |
 
 ## Code Snippet
 
-
+````Object.entries(hero.biography).forEach((key, value) => {
+    biographyKeys.innerText += (`${key[0]}: ${key[1]}
+    `).split(',').join('\r\n  \r\n')
+  }) ```
 ## Change Log
- 
+Select and random features where not added because did not make sense with the page flow.
+````
