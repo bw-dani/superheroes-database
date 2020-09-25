@@ -120,12 +120,13 @@ https://imgur.com/P3VFVCJ
 
 ## Code Snippet
 
-````Object.entries(hero.biography).forEach((key, value) => {
+```
+Object.entries(hero.biography).forEach((key, value) => {
     biographyKeys.innerText += (`${key[0]}: ${key[1]}
     `).split(',').join('\r\n  \r\n')
-  }) ```
-
+  })
+```
 
 ## Change Log
-Select and random features where not added because did not make sense with the page flow.
 
+Select and random features where not added because did not make sense with the page flow.
