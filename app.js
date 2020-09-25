@@ -50,10 +50,9 @@ let statsList = hero => {
   biographyKeys.className = "biography-entries"
 
   Object.entries(hero.biography).forEach((key, value) => {
-    biographyKeys.innerText += (`${key[0]}: ${key[1]}
-    `).split(',').join('\r\n  \r\n')
+    biographyKeys.innerHTML += (`<p>${key[0]}: ${key[1]}</p>`)
   }) //loop through each entrie, the api returned a JSON array of objects
-
+  biographyKeys.innerHTML.className = "pTagsBK"
   biography.appendChild(biographyKeys) // append the paragraph to the biography div
 
 
@@ -67,7 +66,7 @@ let statsList = hero => {
   powerStatsKeys.className = "powerstats-keys"
 
   Object.entries(hero.powerstats).forEach((key, value) => {
-    powerStatsKeys.innerText += (`${key} \n \n`).split(',').join(':')
+    powerStatsKeys.innerHTML += (`<p>${key}</p>`)
   })
   powerStats.appendChild(powerStatsKeys)
 

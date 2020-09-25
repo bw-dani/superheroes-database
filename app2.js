@@ -44,7 +44,7 @@ let statsList1 = hero => {
   powerStatsKeys1.className = "powerstats-keys1"
 
   Object.entries(hero.powerstats).forEach((key, value) => {
-    powerStatsKeys1.innerText += (`${key} \n`).split(',').join(':')
+    powerStatsKeys1.innerHTML += (`<p>${key}</p>`)
   })
   powerStats1.appendChild(powerStatsKeys1)
   heroDisplay1.appendChild(heroContainer1)
@@ -104,7 +104,7 @@ let statsList2 = hero => {
   powerStatsKeys2.className = "powerstats-keys2"
 
   Object.entries(hero.powerstats).forEach((key, value) => {
-    powerStatsKeys2.innerText += (`${key} \n`).split(',').join(':')
+    powerStatsKeys2.innerHTML += (`<p>${key}</p>`)
   })
   powerStats2.appendChild(powerStatsKeys2)
   heroDisplay2.appendChild(heroContainer2)

@@ -144,6 +144,10 @@ h2 {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 .power-stats {
   display: inline-flex;
   flex-wrap: nowrap;

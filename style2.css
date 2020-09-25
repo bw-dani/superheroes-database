@@ -167,6 +167,10 @@ h2 {
   font-family: 'Alegreya Sans SC', sans-serif;
 }
 
+p {
+  margin: 0;
+}
+
 .powerstats-values1,
 .powerstats-values2 {
   padding: 0 10px;
