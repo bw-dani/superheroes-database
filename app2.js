@@ -1,13 +1,9 @@
-const DOMAIN = 'https://superheroapi.com/api'
+const DOMAIN = 'https://cors-anywhere.herokuapp.com/superheroapi.com/api'
 const ACCESS_TOKEN = '10214601250059755'
 const BASE_URL = `${DOMAIN}/${ACCESS_TOKEN}`
 
 
-
-
-
 // **** SEARCH BUTTON 1 ****
-
 
 const input1 = document.querySelector('.search-crt1')
 const button1 = document.querySelector('.submit-button1')
@@ -15,9 +11,8 @@ const button1 = document.querySelector('.submit-button1')
 
 button1.addEventListener('click', async () => {
   let userInput = input1.value;
-  const response = await axios.get(`${BASE_URL}/search/${userInput}`); //endpoint able to search character by name
-  console.log(response.data.results[0]);
-  statsList1(response.data.results[0]) // result wanted to get information of the first in the list
+  const response = await axios.get(`${BASE_URL}/search/${userInput}`);
+  statsList1(response.data.results[0])
 
 });
 const heroDisplay1 = document.querySelector('.show-hero1')
@@ -31,13 +26,12 @@ let statsList1 = hero => {
   let heroName1 = document.createElement('h2');
   heroName1.innerHTML = `${hero.name}`;
   section1.append(heroName1);
-  console.log(heroName1);
+
 
   //    **** IMAGE ****
   const heroImg1 = document.createElement('img')
   heroImg1.className = "hero-img1"
   heroImg1.setAttribute('src', hero.image.url)
-  console.log(heroImg1);
   heroContainer1.appendChild(heroImg1)
 
   // **** POWERSTATS ****
@@ -67,10 +61,6 @@ function removeHero1() {
 
 
 
-
-
-
-
 //    ***** SEARCH BUTTON 2 *****
 
 
@@ -81,9 +71,8 @@ const button2 = document.querySelector('.submit-button2')
 
 button2.addEventListener('click', async () => {
   let userInput = input2.value;
-  const response = await axios.get(`${BASE_URL}/search/${userInput}`); //endpoint able to search character by name
-  console.log(response.data.results[0]);
-  statsList2(response.data.results[0]) // result wanted to get information of the first in the list
+  const response = await axios.get(`${BASE_URL}/search/${userInput}`);
+  statsList2(response.data.results[0])
 })
 
 const heroDisplay2 = document.querySelector('.show-hero2')
@@ -97,13 +86,12 @@ let statsList2 = hero => {
   let heroName2 = document.createElement('h2');
   heroName2.innerHTML = `${hero.name}`;
   section2.append(heroName2);
-  console.log(heroName2);
+
 
   //    **** IMAGE ****
   const heroImg2 = document.createElement('img')
   heroImg2.className = "hero-img1"
   heroImg2.setAttribute('src', hero.image.url)
-  console.log(heroImg2);
   heroContainer2.appendChild(heroImg2)
 
   // **** POWERSTATS ****

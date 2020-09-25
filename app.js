@@ -1,4 +1,4 @@
-const DOMAIN = 'https://superheroapi.com/api'
+const DOMAIN = 'https://cors-anywhere.herokuapp.com/superheroapi.com/api'
 const ACCESS_TOKEN = '10214601250059755'
 const BASE_URL = `${DOMAIN}/${ACCESS_TOKEN}`
 
